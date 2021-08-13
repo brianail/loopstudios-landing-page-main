@@ -60,21 +60,22 @@ ul li a:hover{
 
 #btn-mobile{
     display: none;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 10px;
 }
 
-@media (max-width: 500px){
+@media (max-width: 600px){
 
     header{
         background-image: url(/images/mobile/image-hero.jpg);
         background-attachment: fixed;
-        background-size: contain;
+        background-size: cover;
         height: 650px;
     }
 
     .banner{
         position: absolute;
-        top: 300px;
+        top: 440px;
         left: 20px;
         width: 270px;
     }
@@ -85,6 +86,19 @@ ul li a:hover{
 
     #btn-mobile{
         display: block;
+    }
+
+    button{
+        background-color: white;
+        color: black;
+        border: none;
+    }
+
+
+    button:hover{
+        background-color: black;
+        color: white;
+        border: none;
     }
 
     .top{
