@@ -25,6 +25,10 @@ header{
     padding: 1.5rem;
 }
 
+.logo{
+    padding: 10px;
+}
+
 .top {
     display: flex;
     list-style: none;
@@ -69,7 +73,6 @@ ul li a:hover{
     header{
         background-image: url(/images/mobile/image-hero.jpg);
         background-attachment: fixed;
-        background-size: cover;
         height: 650px;
     }
 
