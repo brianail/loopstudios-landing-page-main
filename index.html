@@ -7,66 +7,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Loopstudio</title>
+
+  <script>
+    const btnMobile = document.getElementById("btn-mobile");
+
+    function toggleMenu() {
+      const nav = document.getElementById("nav");
+      nav.classList.toggle("active");
+    }
+
+    btnMobile.addEventListener("click", toogleMenu);
+  </script>
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">
-        <a href="index.html">
-          <img src="/images/logo.svg" alt="logo">
-        </a>
-      </div>
 
-      <nav>
-        <button id="btn-mobile">Menu</button>
-        <ul class="top">
-          <li><a href="">About</a></li>
-          <li><a href="">Careers</a></li>
-          <li><a href="">Events</a></li>
-          <li><a href="">Products</a></li>
-          <li><a href="">Support</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="/images/logo.svg" alt="logo">
+      </a>
+    </div>
 
+    <nav>
+      <button id="btn-mobile">
+        <span id="hamburguer"></span>
+      </button>
+      <ul id="menu">
+        <li><a href="">About</a></li>
+        <li><a href="">Careers</a></li>
+        <li><a href="">Events</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">Support</a></li>
+      </ul>
+    </nav>
     <div class="banner">
       <h1>
         IMMERSIVE EXPERIENCES THAT DELIVER.
       </h1>
     </div>
+  </header>
 
-    <main>
-
-      <div class="banner-top">
-        <div class="img-interactive">
-          <img src="/images/desktop/image-interactive.jpg" alt="">
-        </div>
-
-        <div class="card-white">
-          <h1>
-            The leader in interactive VR
-          </h1>
-          <p>
-            Founded in 2011, Loopstudios has been producing world-class virtual reality
-            projects for some of the best companies around the globe. Our award-winning
-            creations have transformed businesses through digital experiences that bind
-            to their brand.
-          </p>
-        </div>
+  <main>
+    <div class="banner-top">
+      <div class="img-interactive">
+        <img src="/images/desktop/image-interactive.jpg" alt="">
       </div>
 
-      <div class="main-bottom">
-        <a href="#">
-          <h2>
-            See All
-          </h2>
-        </a>
+      <div class="card-white">
+        <h1>
+          The leader in interactive VR
+        </h1>
+        <p>
+          Founded in 2011, Loopstudios has been producing world-class virtual reality
+          projects for some of the best companies around the globe. Our award-winning
+          creations have transformed businesses through digital experiences that bind
+          to their brand.
+        </p>
       </div>
+    </div>
 
-      <div class="galeria">
-        <div class="card">
-          <a href="">
+    <div class="main-bottom">
+      <a href="#">
+        <h2>
+          See All
+        </h2>
+      </a>
+    </div>
+
+    <div class="galeria">
+      <div class="card">
+        <a href="">
           <div class="foto">
             <img src="/images/desktop/image-deep-earth.jpg" alt="">
           </div>
@@ -76,10 +87,10 @@
             </h2>
           </div>
         </a>
-        </div>
+      </div>
 
-        <div class="card">
-          <a href="">
+      <div class="card">
+        <a href="">
           <div class="foto">
             <img src="/images/desktop/image-night-arcade.jpg" alt="">
           </div>
@@ -89,10 +100,10 @@
             </h2>
           </div>
         </a>
-        </div>
+      </div>
 
-        <div class="card">
-          <a href="">
+      <div class="card">
+        <a href="">
           <div class="foto">
             <img src="/images/desktop/image-soccer-team.jpg" alt="">
           </div>
@@ -102,10 +113,10 @@
             </h2>
           </div>
         </a>
-        </div>
+      </div>
 
-        <div class="card">
-          <a href="">
+      <div class="card">
+        <a href="">
           <div class="foto">
             <img src="/images/desktop/image-grid.jpg" alt="">
           </div>
@@ -115,10 +126,10 @@
             </h2>
           </div>
         </a>
-        </div>
+      </div>
 
-        <div class="card">
-          <a href="">
+      <div class="card">
+        <a href="">
           <div class="foto">
             <img src="/images/desktop/image-from-above.jpg" alt="">
           </div>
@@ -128,10 +139,10 @@
             </h2>
           </div>
         </a>
-        </div>
+      </div>
 
-        <div class="card">
-          <a href="">
+      <div class="card">
+        <a href="">
           <div class="foto">
             <img src="/images/desktop/image-pocket-borealis.jpg" alt="">
           </div>
@@ -141,10 +152,10 @@
             </h2>
           </div>
         </a>
-        </div>
+      </div>
 
-        <div class="card">
-          <a href="">
+      <div class="card">
+        <a href="">
           <div class="foto">
             <img src="/images/desktop/image-curiosity.jpg" alt="">
           </div>
@@ -154,10 +165,10 @@
             </h2>
           </div>
         </a>
-        </div>
+      </div>
 
-        <div class="card">
-          <a href="">
+      <div class="card">
+        <a href="">
           <div class="foto">
             <img src="/images/desktop/image-fisheye.jpg" alt="">
           </div>
@@ -167,53 +178,64 @@
             </h2>
           </div>
         </a>
-        </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer>
-      <div class="footer-logo">
-        <img src="/images/logo.svg" alt="">
+  <footer>
+    <div class="footer-logo">
+      <img src="/images/logo.svg" alt="">
+    </div>
+
+    <div class="down">
+      <ul>
+        <li><a href="">About</a></li>
+        <li><a href="">Careers</a></li>
+        <li><a href="">Events</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">Support</a></li>
+      </ul>
+    </div>
+
+
+    <!-- Div do atribution do frontendementor -->
+    <div class="attribution">
+      <div id="icons">
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-pinterest"></i></a>
       </div>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Brian Ail</a>.
+      <br>
+      © 2021 Loopstudios. All rights reserved.
+      <br>
 
-      <div class="down">
-        <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Careers</a></li>
-          <li><a href="">Events</a></li>
-          <li><a href="">Products</a></li>
-          <li><a href="">Support</a></li>
-        </ul>
-      </div>
+    </div>
+  </footer>
 
 
-      <!-- Div do atribution do frontendementor -->
-      <div class="attribution">
-        <div id="icons">
-          <a href=""><i class="fab fa-facebook"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
-          <a href=""><i class="fab fa-twitter"></i></a>
-          <a href=""><i class="fab fa-pinterest"></i></a>
-        </div>
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Brian Ail</a>.
-        <br>
-        © 2021 Loopstudios. All rights reserved.
-        <br>
-       
-      </div>
-    </footer>
+  <script>
+    const btnMobile = document.getElementById("btn-mobile");
 
-  </div>
+    function toggleMenu() {
+      const nav = document.getElementById("nav");
+      nav.classList.toggle("active");
+    }
 
-  <script src="/js.js">
+    btnMobile.addEventListener("click", toogleMenu);
   </script>
+
+
+
+  <!-- scrollrevel -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 
 
   <!-- Script para icons -->
   <script src="https://kit.fontawesome.com/4c65401d66.js" crossorigin="anonymous"></script>
 
-  s
 
 </body>
 

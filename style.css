@@ -13,7 +13,8 @@ body {
 
 }
 
-header{
+
+header {
     display: flex;
     justify-content: space-between;
     height: 500px;
@@ -25,24 +26,24 @@ header{
     padding: 1.5rem;
 }
 
-.logo{
+.logo {
     padding: 5px;
 }
 
-.top {
+#menu {
     display: flex;
     list-style: none;
     gap: 1.5rem;
     font-size: 18px;
 }
 
-ul li a{
+ul li a {
     text-decoration: none;
     color: white;
     padding: 5px;
 }
 
-ul li a:hover{
+ul li a:hover {
     border-bottom: 2px solid white;
 }
 
@@ -62,61 +63,115 @@ ul li a:hover{
     color: white;
 }
 
-#btn-mobile{
+#btn-mobile {
     display: none;
-    padding: 15px;
-    border-radius: 10px;
 }
 
-@media (max-width: 600px){
 
-    header{
+@media (max-width: 600px) {
+
+    header {
         background-attachment: fixed;
         background-image: url(/images/mobile/image-hero.jpg);
         background-size: 100%;
         height: 650px;
     }
 
-    .banner{
+    .banner {
         position: absolute;
         top: 440px;
         left: 20px;
         width: 270px;
     }
-    .banner h1{
+
+    .banner h1 {
         font-size: 1.5rem;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
 
     }
 
-    #btn-mobile{
+    #hamburguer{
+        border-top: 3px solid white;
+        width: 25px;
+    }
+
+    #hamburguer::after, #hamburguer::before{
+        content: '';
         display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
     }
 
-    button{
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after{
+        transform: rotate(-123deg);
+        top: -7px;
+    }
+
+
+    #menu {
+        /*
+        display: none;*/
+        display: block;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        top: 80px;
+        right: 0px;
+        transition: .6s;
+        background-color: rgba(0, 0, 0, 0.863);
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu {
+        height: 100vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu li a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    #menu a {
+        border: none;
+    }
+
+    #menu a:hover {
         background-color: white;
         color: black;
-        border: none;
     }
 
 
-    button:hover{
-        background-color: rgba(0, 0, 0, 0.39);
-        color: white;
-        border: none;
-    }
 
-    .top{
-        display: none;
-    }
-
-    #nav.active .top{
-        display: flex;
-    }
 
 }
-
-
-
 
 /* main */
 main {
@@ -163,23 +218,23 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     margin: 5.5rem;
     width: 100px;
 }
 
-.main-bottom h2{
+.main-bottom h2 {
     font-weight: 100;
     border: 1px solid black;
     padding: 10px;
 }
 
-.main-bottom a{
+.main-bottom a {
     color: black;
     text-decoration: none;
 }
 
-.main-bottom a:hover{
+.main-bottom a:hover {
     background-color: black;
     color: white;
     border: 1px solid white;
@@ -233,14 +288,14 @@ footer {
     padding: 30px 20px;
 }
 
-.down{
+.down {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.down ul li{
+.down ul li {
     display: flex;
     align-items: center;
     flex-direction: column;
