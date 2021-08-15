@@ -19,9 +19,9 @@ header {
     justify-content: space-between;
     height: 500px;
     background-image: url(/images/desktop/image-hero.jpg);
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
     box-sizing: border-box;
     padding: 1.5rem;
 }
@@ -33,6 +33,7 @@ header {
 #menu {
     display: flex;
     list-style: none;
+    padding-top: 10px;
     gap: 1.5rem;
     font-size: 18px;
 }
@@ -67,108 +68,6 @@ ul li a:hover {
     display: none;
 }
 
-
-@media (max-width: 600px) {
-
-    header {
-        background-attachment: fixed;
-        background-image: url(/images/mobile/image-hero.jpg);
-        background-size: 100%;
-        height: 650px;
-    }
-
-    .banner {
-        position: absolute;
-        top: 440px;
-        left: 20px;
-        width: 270px;
-    }
-
-    .banner h1 {
-        font-size: 1.5rem;
-    }
-
-    #btn-mobile {
-        display: flex;
-        padding: 0.8rem 1rem;
-        font-size: 1rem;
-        border: none;
-        background: none;
-        cursor: pointer;
-
-    }
-
-    #menu {
-        display: none; /*
-        display: block;*/
-        align-items: center;
-        position: absolute;
-        width: 100%;
-        height: 0px;
-        top: 80px;
-        right: 0px;
-        transition: .6s;
-        background-color: rgba(0, 0, 0, 0.863);
-        z-index: 1000;
-        visibility: hidden;
-        overflow-y: hidden;
-    }
-
-    #nav.active #menu {
-        height: 100vh;
-        visibility: visible;
-        overflow-y: auto;
-    }
-
-    #menu li a {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        padding: 1rem;
-    }
-
-    #menu a {
-        border: none;
-    }
-
-    #menu a:hover {
-        background-color: white;
-        color: black;
-    }
-
-    #hamburguer{
-        border-top: 3px solid white;
-        width: 25px;
-    }
-
-    #hamburguer::after, #hamburguer::before{
-        content: '';
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin-top: 5px;
-        transition: .3s;
-        position: relative;
-    }
-
-    #nav.active #hamburguer{
-        border-top-color: transparent;
-    }
-
-    #nav.active #hamburguer::before{
-        transform: rotate(135deg);
-    }
-
-    #nav.active #hamburguer::after{
-        transform: rotate(-123deg);
-        top: -7px;
-    }
-
-
-
-}
 
 /* main */
 main {
@@ -318,5 +217,112 @@ i {
 }
 
 i:hover {
-    color: hsl(228, 45%, 44%);
+    color: hsl(0, 0%, 60%);
+}
+
+
+
+
+@media (max-width: 750px) {
+
+    header {
+        background-attachment: fixed;
+        background-image: url(/images/mobile/image-hero.jpg);
+        background-size: 100%;
+        height: 650px;
+    }
+
+    .banner {
+        position: absolute;
+        top: 440px;
+        left: 20px;
+        width: 270px;
+    }
+
+    .banner h1 {
+        font-size: 1.5rem;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+    }
+
+    #menu {
+        display: none;
+        /*
+        display: block;*/
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        top: 80px;
+        right: 0px;
+        transition: .6s;
+        background-color: rgba(0, 0, 0, 0.863);
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu {
+        height: 100vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu li a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    #menu a {
+        border: none;
+    }
+
+    #menu a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    #hamburguer {
+        border-top: 3px solid white;
+        width: 25px;
+    }
+
+    #hamburguer::after,
+    #hamburguer::before {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburguer {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after {
+        transform: rotate(-123deg);
+        top: -7px;
+    }
+
+
+
 }

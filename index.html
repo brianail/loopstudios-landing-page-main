@@ -8,23 +8,15 @@
   <link rel="stylesheet" href="style.css">
   <title>Loopstudio</title>
 
-  <script>
-    const btnMobile = document.getElementById("btn-mobile");
-
-    function toggleMenu() {
-      const nav = document.getElementById("nav");
-      nav.classList.toggle("active");
-    }
-
-    btnMobile.addEventListener("click", toogleMenu);
-  </script>
-
+  <!-- script ScrollRevel -->
   <script src="https://unpkg.com/scrollreveal">
   </script>
-
   <script>
-
+    ScrollReveal({
+      reset: true
+    });
   </script>
+
 </head>
 
 <body>
@@ -222,7 +214,7 @@
     </div>
   </footer>
 
-
+  <!-- Menu para active -->
   <script>
     const btnMobile = document.getElementById("btn-mobile");
 
@@ -234,24 +226,21 @@
     btnMobile.addEventListener("click", toogleMenu);
   </script>
 
-<script>
-  ScrollReveal().reveal('header');
-  ScrollReveal().reveal('.nav');
-  ScrollReveal().reveal('.banner');
-  ScrollReveal().reveal('.banner-top');
-  ScrollReveal().reveal('.card-white');
-  ScrollReveal().reveal('.main-bottom');
-  ScrollReveal().reveal('.card');
-  ScrollReveal().reveal('.information');
-  ScrollReveal().reveal('footer');
-  ScrollReveal().reveal('.down');
-  ScrollReveal().reveal('.attribution');
-</script>
-
 
   <!-- scrollrevel -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
+  <script>
+    ScrollReveal().reveal('header')
+    ScrollReveal().reveal('.nav')
+    ScrollReveal().reveal('.banner')
+    ScrollReveal().reveal('.banner-top')
+    ScrollReveal().reveal('.card-white')
+    ScrollReveal().reveal('.main-bottom')
+    ScrollReveal().reveal('.card')
+    ScrollReveal().reveal('.information')
+    ScrollReveal().reveal('footer')
+    ScrollReveal().reveal('.down')
+    ScrollReveal().reveal('.attribution')
+  </script>
 
   <!-- Script para icons -->
   <script src="https://kit.fontawesome.com/4c65401d66.js" crossorigin="anonymous"></script>
