@@ -98,40 +98,9 @@ ul li a:hover {
 
     }
 
-    #hamburguer{
-        border-top: 3px solid white;
-        width: 25px;
-    }
-
-    #hamburguer::after, #hamburguer::before{
-        content: '';
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin-top: 5px;
-        transition: .3s;
-        position: relative;
-    }
-
-    #nav.active #hamburguer{
-        border-top-color: transparent;
-    }
-
-    #nav.active #hamburguer::before{
-        transform: rotate(135deg);
-    }
-
-    #nav.active #hamburguer::after{
-        transform: rotate(-123deg);
-        top: -7px;
-    }
-
-
     #menu {
-        /*
-        display: none;*/
-        display: block;
+        display: none; /*
+        display: block;*/
         align-items: center;
         position: absolute;
         width: 100%;
@@ -168,6 +137,34 @@ ul li a:hover {
         color: black;
     }
 
+    #hamburguer{
+        border-top: 3px solid white;
+        width: 25px;
+    }
+
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after{
+        transform: rotate(-123deg);
+        top: -7px;
+    }
 
 
 
