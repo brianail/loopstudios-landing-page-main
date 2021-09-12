@@ -142,7 +142,7 @@ main {
 }
 
 .main-btn {
-    width: 70%;
+    width: 90%;
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -300,11 +300,13 @@ i:hover {
         position: absolute;
         top: 440px;
         left: 20px;
-        width: 270px;
+        width: 60%;
+        height: 20%;
+        padding: 1rem;
     }
 
     .banner h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     #menu {
@@ -391,5 +393,67 @@ i:hover {
     #nav.active #hamburger::after {
         transform: rotate(-140deg);
         top: -7px;
+    }
+
+    .banner-top{
+        width: 90%;
+        height: 650px;
+    }
+
+    .img-interactive img{
+        width: 100%;
+        height: auto;
+    }
+
+    .card-white{
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .main-btn{
+        width: 90%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .main-btn h1 {
+        padding: 1rem 0;
+    }
+
+    .card{
+        width: 95%;
+    }
+
+    .container-footer{
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .down ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0.1rem;
+    }
+
+    .attribution{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #icons{
+        text-align: center;
     }
 }
