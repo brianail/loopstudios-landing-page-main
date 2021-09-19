@@ -21,6 +21,7 @@ header {
     width: 100%;
     height: 700px;
     background-image: url(/images/desktop/image-hero.jpg);
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
@@ -51,13 +52,13 @@ ul li a:hover {
 }
 
 .banner {
-    width: 40%;
-    height: 12rem;
+    width: 400px;
+    height: 200px;
     padding: 2rem;
     box-sizing: border-box;
     border: 1.5px solid white;
     position: absolute;
-    bottom: 10rem;
+    top: 430px;
     left: 4rem;
 }
 
@@ -228,39 +229,36 @@ footer {
 
 .container-footer {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.down {
-    width: 100%;
-}
-
-.down ul li {
+.container-footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
-    list-style: none;
-}
-
-.down ul li a {
     padding: 1rem;
-    font-size: 1.3rem;
+}
+
+.down ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     list-style: none;
 }
 
-.down ul li a:hover {
-    border-radius: 2rem;
-    background-color: white;
-    color: black;
+.down ul li{
+    font-size: 1.2rem;
+    padding: 1rem;
 }
 
-.attribution {
-    margin: 30px;
-    font-size: 14px;
-    text-align: right;
+.attribution{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .code{
@@ -277,6 +275,10 @@ footer {
     font-size: 1rem;
     font-weight: 100;
     color: rgba(255, 255, 255, 0.726);
+}
+
+#icons{
+    text-align: center;
 }
 
 
@@ -439,22 +441,4 @@ i:hover {
         width: 80%;
     }
 
-    .container-footer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-    }
-
-    .attribution{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-    }
-
-    #icons{
-        text-align: center;
-    }
 }
