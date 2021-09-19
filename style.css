@@ -308,10 +308,10 @@ i:hover {
     }
 
     .banner {
-        width: 75%;
+        width: 290px;
         height: 150px;
         position: absolute;
-        top: 380px;
+        top: 400px ;
         left: 20px;
         padding: 2rem;
     }
